@@ -35,10 +35,17 @@ public class EmployeeManager {
 
     }
     public Employee findByMaxSalary(){
-        Employee e = null;
+        Employee highestE = null;
         double highestSalary = -1; // svejedno da li nula ili -1
-        
 
+        for (Employee e: employees){
+            if(e.getSalary() > highestSalary){
+                highestSalary = e.getSalary();
+                highestE = e; //aktuele employee
+            }
+        }
+       return highestE;
 
     }
+
 }
