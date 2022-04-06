@@ -11,25 +11,27 @@ public class ArraysTests {
         System.out.println("The smallest number is " + findSmallestNumber(arr));
         System.out.println("The biggest number is  " + findBiggestNumber(arr));
         System.out.println("The summ is " + theSummOfTheElements(arr));
+        sortMyNumbers(arr);
     }
 
     //MINIMUM
-    public static int findSmallestNumber(int[] arr){
+    public static int findSmallestNumber(int[] arr) {
         int min = arr[0];
         for (int i = 0; i < arr.length; i++) {
-                if (min > arr[i]) {
-                    min = arr[i];
-                }
-
+            if (min > arr[i]) {
+                min = arr[i];
             }
+
+        }
 
         return min;
     }
+
     //MAXIMUM
-    public static int findBiggestNumber(int[] arr){
+    public static int findBiggestNumber(int[] arr) {
         int max = arr[0];
         for (int i = 0; i < arr.length; i++) {
-            if(max < arr[i]){
+            if (max < arr[i]) {
                 max = arr[i];
             }
 
@@ -38,7 +40,7 @@ public class ArraysTests {
     }
     //SUMME
 
-    public static int theSummOfTheElements(int[]arr){
+    public static int theSummOfTheElements(int[] arr) {
         int summe = 0;
 
         for (int i = 0; i < arr.length; i++) {
@@ -47,5 +49,24 @@ public class ArraysTests {
 
         return summe;
     }
+    //sortiranje elemenata od manjeg ka vecem
+    public static void sortMyNumbers(int[] arr) {
 
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = i +1; j < arr.length; j++) {
+                int temp = 0;
+                if (arr[i] > arr[j]) {
+
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+
+            System.out.print(arr[i]);
+            System.out.print(",");
+        }
+    }
 }
