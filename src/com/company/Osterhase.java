@@ -5,10 +5,10 @@ public class Osterhase {
     private int anzahlVersteckteEier;
     private String name;  //wenn ich name nicht verändern möchte dann nur getter
     private HasenReligion persoenlicherGlaube;
-
-
-
     private int haeschenNummer;
+
+
+
     public Osterhase(String name, int anzahlVersteckteEier, HasenReligion glaube){
         this.name = name;
         this.anzahlVersteckteEier = anzahlVersteckteEier;

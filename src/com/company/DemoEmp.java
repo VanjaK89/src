@@ -20,6 +20,10 @@ public class DemoEmp {
         System.out.println(mgr.findByMaxSalary());
 
 
+        System.out.println(e1.compareDepartment(e3));
+        System.out.println(e1.compareDepartment(e2));
+
+
 
     }
 }

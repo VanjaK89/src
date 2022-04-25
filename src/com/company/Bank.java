@@ -1,10 +1,12 @@
 package com.company;
 
+import java.util.HashMap;
+
 public class Bank {
     public static void main(String[] args) {
-        Account name = new Account("Konto1", "AT537373", "BIZ");
-        Account name1= new Account("Konto2", "AT563737", "BIZ");
-        Account name2 = new Account("Konto3", "AT56373", "BIZ");
+        Account name = new Account("Dagobert", "AT537373", "BIZ");
+        Account name1= new Account("Daisy", "AT563737", "BIZ");
+        Account name2 = new Account("Donald", "AT56373", "BIZ");
 
 
          name.add(1000);
@@ -23,21 +25,23 @@ public class Bank {
 
         }
 
-
-
         System.out.println(Account.getUniqueID());
         for (int i = 0; i < accounts.length; i++) {
             System.out.println(accounts[i]);
         }
 
 
+        HashMap<String,Account> bank = new HashMap<>();
+        bank.put("Dagobert", name);
+        bank.put("Daisy", name1);
+        bank.put("Donald", name2);
 
-
-
-
-
-
-
-
+        System.out.println(bank.containsKey("Dagobert"));
+        //werte auslesehn tuen wir mit get, möchten der wert des schlüssels Daisy erhalten
+        System.out.println(bank.get("Daisy"));
+        for(String owner: bank.keySet()){
+            System.out.println(owner);
+            System.out.println(bank.get(owner));
+        }
     }
 }
