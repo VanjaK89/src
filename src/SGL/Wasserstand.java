@@ -8,6 +8,14 @@ public class Wasserstand {
     private double messWertFuerAlarmierung;
     private int zeitpunkt;
 
+    public Wasserstand(int id, String gewaesserName, String ort, double messWert, double messWertFuerAlarmierung, int zeitpunkt) {
+        this.id = id;
+        this.gewaesserName = gewaesserName;
+        Ort = ort;
+        this.messWert = messWert;
+        this.messWertFuerAlarmierung = messWertFuerAlarmierung;
+        this.zeitpunkt = zeitpunkt;
+    }
 
     public int getId() {
         return id;
@@ -68,5 +76,5 @@ public class Wasserstand {
                 ", zeitpunkt=" + zeitpunkt +
                 '}';
     }
-    
+
 }
